@@ -15,7 +15,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     device/carbon/sepolicy/qcom/system \
     device/carbon/sepolicy/qcom/private
 else
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     device/carbon/sepolicy/qcom/dynamic \
     device/carbon/sepolicy/qcom/vendor
 endif
