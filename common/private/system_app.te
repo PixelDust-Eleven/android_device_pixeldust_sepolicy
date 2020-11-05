@@ -8,3 +8,6 @@ allow system_app selinuxfs:file r_file_perms;
 hal_client_domain(system_app, hal_lineage_fastcharge)
 
 get_prop(system_app, vendor_security_patch_level_prop)
+
+# Allow Settings to set legacy wfd videomode prop
+set_prop(system_app, wfd_legacy_video_mode_prop);
