@@ -3,6 +3,9 @@ allow platform_app nfc_service:service_manager find;
 allow platform_app cache_recovery_file:dir create_dir_perms;
 allow platform_app cache_recovery_file:file create_file_perms;
 
+# Allow FastCharge HAL service to be found
+hal_client_domain(platform_app, hal_lineage_fastcharge)
+
 # Allow FOD HAL service to be found
 hal_client_domain(platform_app, hal_lineage_fod)
 
