@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from CarbonROM
+# inherit from PixelDust
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -16,19 +16,19 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/public
+    device/pixeldust/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/private
+    device/pixeldust/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/carbon/sepolicy/common/dynamic
+    device/pixeldust/sepolicy/common/dynamic
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/carbon/sepolicy/common/dynamic \
-    device/carbon/sepolicy/common/vendor
+    device/pixeldust/sepolicy/common/dynamic \
+    device/pixeldust/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/carbon/sepolicy/legacy-common/sepolicy.mk
+-include device/pixeldust/sepolicy/legacy-common/sepolicy.mk
